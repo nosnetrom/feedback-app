@@ -3,7 +3,7 @@ import FeedbackContext from '../context/FeedbackContext';
 
 function RatingSelect({select, rating}) {
   const [selected, setSelected] = useState(1);
-
+  console.log(selected);
   const handleChange = (e) => {
     //setSelected(+e.currentTarget.value);
     select(+e.currentTarget.value)
