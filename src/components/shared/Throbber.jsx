@@ -1,8 +1,8 @@
-import throbber from '../assets/throbber.gif'
+import throbber from '../assets/throbber.png'
 
 function Throbber() {
   return (
-    <img src={throbber} alt="Loading..." style={{width: "193px", height: "192px", margin: "auto", display: "block"}} />
+    <img src={throbber} alt="Loading..." style={{width: "192px", height: "192px", margin: "auto", display: "block"}} />
   )
 }
 
