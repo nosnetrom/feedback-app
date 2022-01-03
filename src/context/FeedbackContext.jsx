@@ -3,7 +3,7 @@ import {createContext, useState, useEffect} from 'react';
 const FeedbackContext = createContext();
 
 // Cheating on the proxy address?
-const proxy = 'http://feedback-app-db.herokuapp.com';
+const proxy = 'https://feedback-app-db.herokuapp.com';
 
 export const FeedbackProvider = ({children}) => {
   const [isLoading, setIsLoading] = useState(true);
