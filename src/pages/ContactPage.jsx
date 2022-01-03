@@ -8,7 +8,7 @@ function ContactPage(props) {
         <h1>Contact:</h1>
         <p>
           <FaEnvelope />
-          <a style={{paddingLeft: '1rem'}} href="mailto:jmoretea6@gmail.com">jmoretea6@gmail.com</a>
+          <span style={{paddingLeft: '1rem'}}>nosnetrom (at) gmail (dot) com</span>
         </p>
       </div>
     </Card>

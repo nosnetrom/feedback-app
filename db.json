@@ -19,6 +19,16 @@
       "id": 4,
       "rating": 4,
       "text": "I love Lucy, and she loves me. We're as happy as two can be... JSON server"
+    },
+    {
+      "text": "This is the first post added through the UI to the JSON server.",
+      "rating": 5,
+      "id": 5
+    },
+    {
+      "text": "Truly abysmal. Rivals the work of Ed Wood (well, maybe not quite that bad).",
+      "rating": 2,
+      "id": 6
     }
   ]
 }
