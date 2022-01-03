@@ -2,6 +2,9 @@ import {createContext, useState, useEffect} from 'react';
 
 const FeedbackContext = createContext();
 
+// Cheating on the proxy address?
+const proxy = 'http://feedback-app-db.herokuapp.com';
+
 export const FeedbackProvider = ({children}) => {
   const [isLoading, setIsLoading] = useState(true);
   const [feedback, setFeedback] = useState([]);
@@ -16,7 +19,7 @@ export const FeedbackProvider = ({children}) => {
 
   // Fetch feedback
   const fetchFeedback = async () => {
-    const response = await fetch('/feedback?_sort=rating&_order=desc');
+    const response = await fetch(`${proxy}/feedback?_sort=rating&_order=desc`);
     const data = await response.json();
 
     setFeedback(data);
@@ -26,7 +29,7 @@ export const FeedbackProvider = ({children}) => {
   // Actually update the feedback item
   const updateFeedback = async (id, updatedItem) => {
     const response = await fetch(
-      `/feedback/${id}`,
+      `${proxy}/feedback/${id}`,
       {
         method: 'PUT',
         headers: {
@@ -53,7 +56,7 @@ export const FeedbackProvider = ({children}) => {
   const deleteFeedback = async (id) => { 
     if (window.confirm('Are you sure you want to delete this item?')) {
       await fetch(
-        `/feedback/${id}`,
+        `${proxy}/feedback/${id}`,
         {
           method: 'DELETE',
         }
@@ -65,7 +68,7 @@ export const FeedbackProvider = ({children}) => {
   // Add feedback item
   const addFeedback = async (newFeedback) => {
     const response = await fetch(
-      '/feedback',
+      `${proxy}/feedback`,
       {
         method: 'POST',
         headers: {
